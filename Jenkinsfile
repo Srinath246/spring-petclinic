@@ -10,9 +10,6 @@ node {
     stage ('archival') {
         //archiving artifactory
         archive 'target/*.jar'
-    }
-    stage ('test result') {
-        junit 'target/surefire-reports/*.xml'
-    }
+    }    
 
 }
