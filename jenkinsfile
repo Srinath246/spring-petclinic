@@ -3,7 +3,7 @@ node{
         //git clone
         git branch: 'main', url: 'https://github.com/Srinath246/spring-petclinic.git'
     }
-    stage(maven package) {
+    stage("maven package") {
         //mvn package
         sh 'mvn package'
     }
