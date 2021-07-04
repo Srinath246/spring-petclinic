@@ -1,0 +1,18 @@
+node ("kubemaster){
+    stage("SCM"){
+        //git clone
+        git branch: 'main', credentialsId: '8304dd9d-74a7-4d24-8ab7-6830dccd894a', url: 'https://github.com/Srinath246/spring-petclinic.git'  
+    }
+    stage("build Docker image"){
+       sh 'docker build -t Srinath246/myapp' 
+
+    }
+    stage("push image"){
+       withCredentials([string(credentialsId: '98b6bdf1-e175-4343-8c68-4baf6a2e76bb', variable: 'DocPass')]) {
+    // some block
+    }
+      sh "docker login -u Srinath246 -p ${DocPass}"
+      sh 'docker push Srinath246/myapp'  
+    }
+
+}
