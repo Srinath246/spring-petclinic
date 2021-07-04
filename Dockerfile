@@ -1,4 +1,7 @@
-FROM: TOMCAT
+FROM: tomcat
 WORKDIR: ./app
-COPY: target/*.xml ./app
+COPY: target/*.jar ./app
+CMD: ["echo","hi"]FROM: tomcat
+WORKDIR: ./app
+COPY: target/*.jar ./app
 CMD: ["echo","hi"]
