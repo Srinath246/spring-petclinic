@@ -19,6 +19,6 @@ spec:
       - name: myapp
         image: srinath246/myapp:1
         ports:
-        - containerPort: 80
+        - containerPort: 8080
          
 

@@ -6,8 +6,10 @@ metadata:
 spec:
   selector:
     name: myapp
+  type: NodePort
   ports:
   - name: http
     protocol: TCP
     port: 8080
+    portocol: 30001
   
