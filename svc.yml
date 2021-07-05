@@ -1,0 +1,13 @@
+---
+apiVersion: apps/v1
+kind: service
+metadat:
+  name: mysvc
+spec:
+  selector:
+    name: myapp
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 3306 
+  
