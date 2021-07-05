@@ -15,6 +15,6 @@ metadata:
       spec:
         containers:
         - name: myapp
-          image: srinath246/myapp
+          image: srinath246/myapp:echo $Srinath
           ports:
           - containerPorts: 80  
