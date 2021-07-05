@@ -1,20 +1,22 @@
 ---
 apiVersion: apps/v1
-kind: deployment
+kind: Deployment
 metadata:
-  name: myapp
+  name: mydeployment
   labels:
-    app: spring-petclinic
-  spec:
-    replicas: 2
-    selectors: 
+    name: myapp
+spec:
+  replicas: 2
+  selector: 
+    matchLabels:
       name: myapp 
-    template:
-      metadata:
+  template:
+    metadata:
+      labels:
         name: myapp
-      spec:
-        containers:
-        - name: myapp
-          image: srinath246/myapp:1
-          ports:
-          - containerPort: 8080
+    spec:
+      containers:
+      - name: myapp
+        image: srinath246/myapp:1.1
+        ports:
+        - containerPort: 80

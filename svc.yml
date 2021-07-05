@@ -1,7 +1,7 @@
 ---
-apiVersion: apps/v1
-kind: service
-metadat:
+apiVersion: v1
+kind: Service
+metadata:
   name: mysvc
 spec:
   selector:
@@ -9,6 +9,5 @@ spec:
   ports:
   - name: http
     protocol: TCP
-    port: 8080
-    nodePort: 22
+    port: 80
   
