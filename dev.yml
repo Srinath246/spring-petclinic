@@ -17,4 +17,4 @@ metadata:
         - name: myapp
           image: srinath246/myapp:echo $Srinath
           ports:
-          - containerPorts: 8080  
+          - containerPorts: 3306
