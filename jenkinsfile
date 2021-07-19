@@ -5,7 +5,8 @@ node{
     }
     stage("maven package") {
         //mvn package
-        sh 'mvn package'
+        sh './mvnw spring-boot:run'
+        sh 'mvn package'   
     }
     stage('SonarQube analysis') {
     // performing sonarqube analysis with "withSonarQubeENV(<Name of Server configured in Jenkins>)"
